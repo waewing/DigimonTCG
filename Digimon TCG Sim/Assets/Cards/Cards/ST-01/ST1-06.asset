@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae70c1af9b635747a2707a30577f116, type: 3}
+  m_Name: ST1-06
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 21300000, guid: 1c71b9c0fc26f7d40862a64f0d277e86, type: 3}
+  cardName: Coredramon
+  playCost: 5
+  color: Red
+  digivolveCost: 2
+  DP: 6000
+  level: 4
+  form: Champion
+  digiAttribute: Virus
+  type: Dragon
+  rarity: C
+  code: ST1-06
+  digivolveColor: Red
+  effect: '[Blocker] (When an opponent''s Digimon attacks, you may suspend this Digimon
+    to force the opponent to attack it instead). [When Attacking] Lose 2 memory.'
+  inheritedEffect: 
+  specialDigivolution: 
+  digivolveLevel: 3

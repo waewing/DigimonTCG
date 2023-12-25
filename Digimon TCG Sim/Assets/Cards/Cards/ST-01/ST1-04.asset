@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae70c1af9b635747a2707a30577f116, type: 3}
+  m_Name: ST1-04
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 21300000, guid: a5563e9097a6d8e4bb63f4a23f3964dd, type: 3}
+  cardName: Dracomon
+  playCost: 3
+  color: Red
+  digivolveCost: 0
+  DP: 4000
+  level: 3
+  form: Rookie
+  digiAttribute: Data
+  type: Dragon
+  rarity: C
+  code: ST1-04
+  digivolveColor: Red
+  effect: 
+  inheritedEffect: 
+  specialDigivolution: 
+  digivolveLevel: 2

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae70c1af9b635747a2707a30577f116, type: 3}
+  m_Name: ST1-16
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 21300000, guid: 103b1e71ed41d8442b9f19a77fb486e5, type: 3}
+  cardName: Gaia Force
+  playCost: 8
+  color: Red
+  digivolveCost: 0
+  DP: 0
+  level: 0
+  form: Option
+  digiAttribute: 
+  type: 
+  rarity: U
+  code: ST1-16
+  digivolveColor: Red
+  effect: '[Main] Delete 1 of your opponent''s Digimon.'
+  inheritedEffect: '[Security] Activate this card''s [Main] effect.'
+  specialDigivolution: 
+  digivolveLevel: 0
