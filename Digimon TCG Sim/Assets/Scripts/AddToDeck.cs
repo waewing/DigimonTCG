@@ -21,11 +21,12 @@ public class AddToDeck : MonoBehaviour
         if (destination.name == "Deck" && destination.catalog.Count < 50)
         {
             destination.catalog.Add(card);
+            CardDisplay newcard = Instantiate(card,destination.transform);
         }
         else if(destination.name == "Digi-Egg Deck" && destination.catalog.Count < 5)
         {
             destination.catalog.Add(card);
-            CardDisplay newcard = Instantiate(card);
+            CardDisplay newcard = Instantiate(card,destination.transform);
         }
     }
 }
