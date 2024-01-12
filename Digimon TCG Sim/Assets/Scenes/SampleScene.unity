@@ -989,7 +989,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 300174116}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 300174113}
 --- !u!1 &345345996
 GameObject:
@@ -1620,7 +1621,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 498304829}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 498304826}
 --- !u!1 &500235941
 GameObject:
@@ -1977,7 +1979,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 584524693}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 584524690}
 --- !u!1 &596336420
 GameObject:
@@ -2699,7 +2702,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 651268266}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 651268263}
 --- !u!1 &683324436
 GameObject:
@@ -2813,7 +2817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -29.220488}
+  m_AnchoredPosition: {x: 0, y: -29.220016}
   m_SizeDelta: {x: 271.8, y: 210.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &750877979
@@ -3142,7 +3146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 760260355}
-  destination: {fileID: 90069754}
+  end: {fileID: 90069754}
+  start: {fileID: 1541289157}
   button: {fileID: 760260358}
 --- !u!1 &831799381
 GameObject:
@@ -3483,7 +3488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 928017771}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 928017768}
 --- !u!1 &947372006
 GameObject:
@@ -3672,7 +3678,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 947372012}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 947372009}
 --- !u!1 &1031870400
 GameObject:
@@ -4177,7 +4184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 1196977080}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 1196977077}
 --- !u!1 &1219637598
 GameObject:
@@ -4551,7 +4559,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 1312880605}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 1312880602}
 --- !u!1 &1338554274
 GameObject:
@@ -4740,7 +4749,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 1338554280}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 1338554277}
 --- !u!1 &1355152847
 GameObject:
@@ -5005,7 +5015,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 1366429856}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 1366429853}
 --- !u!1 &1366469717
 GameObject:
@@ -5478,7 +5489,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 1413128594}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 1413128591}
 --- !u!1 &1417952319
 GameObject:
@@ -6317,8 +6329,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1924617670}
   m_HandleRect: {fileID: 1924617669}
   m_Direction: 2
-  m_Value: 1.0000083
-  m_Size: 0.7220061
+  m_Value: 1.0000002
+  m_Size: 0.7220268
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6823,7 +6835,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 1702842709}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 1702842706}
 --- !u!1 &1710216303
 GameObject:
@@ -7347,7 +7360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 1777747707}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 1777747704}
 --- !u!1 &1791177659
 GameObject:
@@ -7624,7 +7638,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 1807698969}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 1807698966}
 --- !u!1 &1814011673
 GameObject:
@@ -8207,7 +8222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 1889759299}
-  destination: {fileID: 1710216308}
+  end: {fileID: 1710216308}
+  start: {fileID: 1541289157}
   button: {fileID: 1889759296}
 --- !u!1 &1891957516
 GameObject:

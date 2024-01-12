@@ -58,6 +58,10 @@ public class SaveDeck : MonoBehaviour
     }
     void LoadOnClick()
     {
+        foreach(CardDisplay card in deck.catalog)
+        {
+            Destroy(card.gameObject);
+        }
         LoadfromJson();
     }
 

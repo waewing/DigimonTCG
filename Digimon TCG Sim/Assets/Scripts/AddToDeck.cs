@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class AddToDeck : MonoBehaviour
 {
     public CardDisplay card;
-    public CardCatalog destination;
+    public CardCatalog end;
+    public CardCatalog start;
     public Button button;
 
     // Start is called before the first frame update
@@ -18,15 +19,37 @@ public class AddToDeck : MonoBehaviour
 
     void TaskOnClick()
     {
-        if (destination.name == "Deck" && destination.catalog.Count < 50)
+        if (end.name == "Deck" && end.catalog.Count < 50)
         {
-            destination.catalog.Add(card);
-            CardDisplay newcard = Instantiate(card,destination.transform);
+            CardDisplay newcard = Instantiate(card,end.transform);
+            newcard.GetComponent<AddToDeck>().start = end;
+            newcard.GetComponent<AddToDeck>().end = start;
+            newcard.GetComponent<AddToDeck>().card = newcard;
+            end.catalog.Add(newcard);
+            
         }
-        else if(destination.name == "Digi-Egg Deck" && destination.catalog.Count < 5)
+
+        else if(end.name == "Digi-Egg Deck" && end.catalog.Count < 5)
         {
-            destination.catalog.Add(card);
-            CardDisplay newcard = Instantiate(card,destination.transform);
+            CardDisplay newcard = Instantiate(card,end.transform);
+            newcard.GetComponent<AddToDeck>().start = end;
+            newcard.GetComponent<AddToDeck>().end = start;
+            newcard.GetComponent<AddToDeck>().card = newcard;
+            end.catalog.Add(newcard);
+        }
+
+        else if(start.name == "Deck")
+        {
+            int i = card.GetComponent<AddToDeck>().start.GetComponent<CardCatalog>().catalog.IndexOf(card,0);
+            card.GetComponent<AddToDeck>().start.GetComponent<CardCatalog>().catalog.RemoveAt(i);
+            Destroy(card.gameObject);
+        }
+        
+        else if(start.name == "Digi-Egg Deck")
+        {
+            int i = card.GetComponent<AddToDeck>().start.GetComponent<CardCatalog>().catalog.IndexOf(card,0);
+            card.GetComponent<AddToDeck>().start.GetComponent<CardCatalog>().catalog.RemoveAt(i);
+            Destroy(card.gameObject);
         }
     }
 }
