@@ -19,13 +19,17 @@ public class SaveDeck : MonoBehaviour
 
     public void SaveToJson()
     {
-        string deckData = JsonUtility.ToJson(deck);
-        // foreach(CardDisplay c in deck.catalog)
-        // {
-        //     deckData += JsonUtility.ToJson(c.card);
-        // }
+        // Debug.Log(deck);
+        // string deckData = JsonUtility.ToJson(deck.catalog);
         string filePath = Application.persistentDataPath + "/" + deckname.text + ".json";
-        System.IO.File.WriteAllText(filePath, deckData);
+        System.IO.File.WriteAllText(filePath, string.Empty);
+        foreach(CardDisplay c in deck.catalog)
+        {
+            string deckData = JsonUtility.ToJson(c.card);
+            System.IO.File.AppendAllText(filePath, deckData);
+        }
+        // string filePath = Application.persistentDataPath + "/" + deckname.text + ".json";
+        // System.IO.File.WriteAllText(filePath, deckData);
         Debug.Log("Save Created");
     }
 
@@ -35,10 +39,10 @@ public class SaveDeck : MonoBehaviour
         string deckData = System.IO.File.ReadAllText(filePath);
 
         JsonUtility.FromJsonOverwrite(deckData,deck);
-        foreach(CardDisplay c in deck.catalog)
-        {
-            Instantiate(c,deck.transform);
-        }
+        // foreach(CardDisplay c in deck.catalog)
+        // {
+        //     Instantiate(c,deck.transform);
+        // }
         Debug.Log("Load Success");
     }
 
@@ -58,10 +62,11 @@ public class SaveDeck : MonoBehaviour
     }
     void LoadOnClick()
     {
-        foreach(CardDisplay card in deck.catalog)
-        {
-            Destroy(card.gameObject);
-        }
+        // foreach(CardDisplay card in deck.catalog)
+        // {
+        //     Destroy(card.gameObject);
+        // }
+        // deck.catalog.Clear();
         LoadfromJson();
     }
 
