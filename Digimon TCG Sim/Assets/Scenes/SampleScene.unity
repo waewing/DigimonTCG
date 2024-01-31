@@ -1736,7 +1736,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.4557227, g: 0.7264151, b: 0.5446572, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2817,7 +2817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -29.220016}
+  m_AnchoredPosition: {x: 0, y: -29.22045}
   m_SizeDelta: {x: 271.8, y: 210.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &750877979
@@ -4235,12 +4235,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.74
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -5102,7 +5102,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 840084433}
   m_Direction: 2
   m_Value: 1.0000006
-  m_Size: 0.73261595
+  m_Size: 0.7326159
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6329,8 +6329,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1924617670}
   m_HandleRect: {fileID: 1924617669}
   m_Direction: 2
-  m_Value: 1.0000002
-  m_Size: 0.7220268
+  m_Value: 1.0000076
+  m_Size: 0.72207826
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7797,8 +7797,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1814011679}
   m_HandleRect: {fileID: 1814011674}
   m_Direction: 0
-  m_Value: 1
-  m_Size: 1
+  m_Value: 0
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9732,8 +9732,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 196578540}
   m_HandleRect: {fileID: 196578539}
   m_Direction: 2
-  m_Value: 1.000002
-  m_Size: 0.46522513
+  m_Value: 1.0000017
+  m_Size: 0.46522507
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
