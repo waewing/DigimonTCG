@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class EditorToStart : MonoBehaviour
+public class GoToVS : MonoBehaviour
 {
     public void GoTo()
     {
-        SceneManager.LoadScene(sceneBuildIndex:0);
+        SceneManager.LoadScene(sceneBuildIndex:2);
     }
 }

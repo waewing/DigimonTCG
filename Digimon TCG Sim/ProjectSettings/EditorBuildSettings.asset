@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/DeckEditor.unity
     guid: d3a970765a135f04c8015a7da14ddde1
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/VS Screen.unity
     guid: 8ec8bb87ef612384cae8eaac28bf9670
+  - enabled: 1
+    path: Assets/Scenes/Game Screen.unity
+    guid: 9d90bc8dea38982469d0e4312871147c
   m_configObjects: {}

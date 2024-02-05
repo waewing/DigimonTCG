@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class StartToDeck : MonoBehaviour
+public class GoToStart : MonoBehaviour
 {
     public void GoTo()
     {
-        SceneManager.LoadScene(sceneBuildIndex:1);
+        SceneManager.LoadScene(sceneBuildIndex:0);
     }
 }
