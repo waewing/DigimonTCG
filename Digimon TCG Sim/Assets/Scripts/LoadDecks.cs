@@ -9,14 +9,11 @@ public class LoadDecks : MonoBehaviour
 {
 
     public TMP_Text box1;
-
     public TMP_Text box2;
-
     public Deck player1;
     public Deck player2;
     public Deck de_deck1;
     public Deck de_deck2;
-    public Deck p1_hand;
     
 
     void Start()
@@ -26,36 +23,10 @@ public class LoadDecks : MonoBehaviour
 
         LoadDeck(player1,de_deck1,GoToGame.deck1);
         LoadDeck(player2,de_deck2,GoToGame.deck2);
-        FisherYatesShuffle(player1);
-        foreach (var x in Enumerable.Range(0,5)) Draw(p1_hand,player1);
     }
 
 
-    void Draw(Deck destination,Deck start)
-    {
-        destination.deck.Add(start.deck[0]);
-        start.deck.RemoveAt(0);
-    }
-    void FisherYatesShuffle(Deck d)
-    {
-        var rand = new System.Random();
-        int index = 0;
-        Card temp;
-        for(int i = d.deck.Count-1; i > 0; i--)
-        {
-            index = rand.Next(i+1);
-            if(index == i)
-            {
-                continue;
-            }
-            else
-            {
-                temp = d.deck[index];
-                d.deck[index] = d.deck[i];
-                d.deck[i] = temp;
-            }
-        }
-    }
+    
     void LoadDeck(Deck player_deck,Deck de_deck,string data)
     {
         //Load Main Deck
