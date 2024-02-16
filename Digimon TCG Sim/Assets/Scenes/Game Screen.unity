@@ -1426,7 +1426,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 589929432}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 589929431}
+        m_TargetAssemblyTypeName: UnityEngine.Component, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &589929432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1548,7 +1560,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 765999702}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 765999699}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &765999702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2485,7 +2509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1316, y: 0}
+  m_AnchoredPosition: {x: -1315.9999, y: 0}
   m_SizeDelta: {x: -2916.4, y: -1868}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1483341335
@@ -2741,6 +2765,8 @@ MonoBehaviour:
   p1_security: {fileID: 864193360}
   p2_security: {fileID: 1073620613}
   card: {fileID: 1638857366}
+  goFirst: {fileID: 589929431}
+  goSecond: {fileID: 765999701}
 --- !u!114 &1623461926
 MonoBehaviour:
   m_ObjectHideFlags: 0

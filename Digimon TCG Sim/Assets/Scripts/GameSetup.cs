@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
+public enum GamePhase {Setup, P1UnsuspendPhase,P1DrawPhase,P1BreedingPhase, P1MainPhase, P1EndPhase,P2UnsuspendPhase,P2DrawPhase,P2BreedingPhase, P2MainPhase, P2EndPhase};
 public class GameSetup : MonoBehaviour
 {
 
@@ -15,12 +17,23 @@ public class GameSetup : MonoBehaviour
     public Deck p2_security;
     public GameObject card;
 
+    public Button goFirst;  
+
+    public Button goSecond;
+
+    int decider = 0;
+
+    public static GamePhase curPhase;
+
     void Start()
     {
+        curPhase = GamePhase.Setup;
         FisherYatesShuffle(p1_deck);
         FisherYatesShuffle(p2_deck);
         StartingDraw(p1_hand,p1_deck);
         StartingDraw(p2_hand,p2_deck);
+        goFirst.onClick.AddListener(P1First);
+        goSecond.onClick.AddListener(P2First);
         
     }
 
@@ -60,4 +73,31 @@ public class GameSetup : MonoBehaviour
             }
         }
     }
+
+    void TurnDecider()
+    {
+        if (decider == 1)
+        {
+            goFirst.transform.parent.gameObject.SetActive(false);
+            curPhase = GamePhase.P1UnsuspendPhase;
+        }
+        else if (decider == 2)
+        {
+            goSecond.transform.parent.gameObject.SetActive(false);
+            curPhase = GamePhase.P2UnsuspendPhase;
+        }
+    }
+
+    void P1First()
+    {
+        decider = 1;
+        TurnDecider();
+    }
+
+    void P2First()
+    {
+        decider = 2;
+        TurnDecider();
+    }
+
 }

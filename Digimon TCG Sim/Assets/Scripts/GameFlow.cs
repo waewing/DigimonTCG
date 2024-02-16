@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class GameFlow : MonoBehaviour
 {
+    void Update()
+    {
+        switch(GameSetup.curPhase)
+        {
+            case GamePhase.P1UnsuspendPhase:
+                Debug.Log("P1 First");
+                break;
+            case GamePhase.P2UnsuspendPhase:
+                Debug.Log("P2 First");
+                break;
+        }
+    }
+
+
     //Unsuspend all cards on your side of the field
     public void UnsuspendPhase()
     {
