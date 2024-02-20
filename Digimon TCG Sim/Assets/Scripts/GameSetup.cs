@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum GamePhase {Setup, P1UnsuspendPhase,P1DrawPhase,P1BreedingPhase, P1MainPhase, P1EndPhase,P2UnsuspendPhase,P2DrawPhase,P2BreedingPhase, P2MainPhase, P2EndPhase};
+
+
 public class GameSetup : MonoBehaviour
 {
 
@@ -16,6 +18,7 @@ public class GameSetup : MonoBehaviour
     public Deck p1_security;
     public Deck p2_security;
     public GameObject card;
+    public static int turnNumber = 0;
 
     public Button goFirst;  
 
@@ -34,6 +37,7 @@ public class GameSetup : MonoBehaviour
         StartingDraw(p2_hand,p2_deck);
         goFirst.onClick.AddListener(P1First);
         goSecond.onClick.AddListener(P2First);
+        turnNumber += 1;
         
     }
 
@@ -47,6 +51,7 @@ public class GameSetup : MonoBehaviour
         dupe.GetComponent<CardDisplay>().card = destination.deck[x];
         }
     }
+    
     void Draw(Deck destination,Deck start)
     {
         destination.deck.Add(start.deck[0]);

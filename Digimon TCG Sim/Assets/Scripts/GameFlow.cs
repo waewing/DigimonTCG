@@ -1,27 +1,123 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameFlow : MonoBehaviour
 {
+    public static string buttonText;
+
+    public bool state = false;
+
+    public Button updatingButton;
+    public Button endTurn;
+
     void Update()
     {
         switch(GameSetup.curPhase)
         {
+            //End Turn uninteractable until Battle Phase
+
+            //Unsuspend Phases
             case GamePhase.P1UnsuspendPhase:
-                Debug.Log("P1 First");
+                endTurn.interactable = false;
+                buttonText = "P1 Unsuspend";
                 break;
             case GamePhase.P2UnsuspendPhase:
-                Debug.Log("P2 First");
+                endTurn.interactable = false;
+                buttonText = "P2 Unsuspend";
+                break;
+
+            //Draw Phases
+            case GamePhase.P1DrawPhase:
+                endTurn.interactable = false;
+                if(GameSetup.turnNumber == 1)
+                {
+                    buttonText = "Go To Breeding Phase";
+                }
+                else
+                {
+                    buttonText = "P1 Draw";
+                }
+                break;
+            case GamePhase.P2DrawPhase:
+                endTurn.interactable = false;
+                if(GameSetup.turnNumber == 1)
+                {
+                    buttonText = "Go To Breeding Phase";
+                }
+                else
+                {
+                    buttonText = "P2 Draw";
+                }
+                break;
+
+            //Breeding Phase
+            case GamePhase.P1BreedingPhase:
+                endTurn.interactable = false;
+                buttonText = "P1 Breed";
+                break;
+            case GamePhase.P2BreedingPhase:
+                endTurn.interactable = false;
+                buttonText = "P2 Breed";
                 break;
         }
     }
 
 
-    //Unsuspend all cards on your side of the field
-    public void UnsuspendPhase()
+    public void PhaseHandler()
     {
-        return;
+        switch(GameSetup.curPhase)
+        {
+            //Unsuspend
+            //Unsuspend all cards in battle area then got to next phase
+            case GamePhase.P1UnsuspendPhase:
+                GameSetup.curPhase = GamePhase.P1DrawPhase;
+                break;
+            case GamePhase.P2UnsuspendPhase:
+                GameSetup.curPhase = GamePhase.P2DrawPhase;
+                break;
+
+
+            //Draw
+            //If turn 1 go to next phase
+            //Otherwise draw 1 card from top of deck
+            case GamePhase.P1DrawPhase:
+                GameSetup.curPhase = GamePhase.P1BreedingPhase;
+                break;
+            case GamePhase.P2DrawPhase:
+                GameSetup.curPhase = GamePhase.P2BreedingPhase;
+                break;
+
+
+            //Breed
+            //Player chooses either to select a breeding option or go to next phase
+            case GamePhase.P1BreedingPhase:
+                GameSetup.curPhase = GamePhase.P1MainPhase;
+                break;
+            case GamePhase.P2BreedingPhase:
+                GameSetup.curPhase = GamePhase.P2MainPhase;
+                break;
+
+
+            //Main
+            // Do main phase stuff (attacking, digivolving, ending turn etc.)
+            case GamePhase.P1MainPhase:
+                GameSetup.curPhase = GamePhase.P1EndPhase;
+                break;
+            case GamePhase.P2MainPhase:
+                GameSetup.curPhase = GamePhase.P2EndPhase;
+                break;
+            
+            
+            //P1 End goes to P2 Unsuspend and vice versa
+            case GamePhase.P1EndPhase:
+                GameSetup.curPhase = GamePhase.P2UnsuspendPhase;
+                break;
+            case GamePhase.P2EndPhase:
+                GameSetup.curPhase = GamePhase.P1UnsuspendPhase;
+                break;
+        }
     }
 
     //Draw a card from top of deck
@@ -29,7 +125,7 @@ public class GameFlow : MonoBehaviour
     //Turn 1, the first player does not draw
     public void DrawPhase()
     {
-        return;
+       return;
     }
 
     //Option of either Hatching an Egg, Moving out of Breeding Area, or doing nothing
@@ -58,4 +154,5 @@ public class GameFlow : MonoBehaviour
     {
         return;
     }
+
 }
