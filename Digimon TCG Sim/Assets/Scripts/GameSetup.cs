@@ -52,7 +52,7 @@ public class GameSetup : MonoBehaviour
         }
     }
     
-    void Draw(Deck destination,Deck start)
+    public static void Draw(Deck destination,Deck start)
     {
         destination.deck.Add(start.deck[0]);
         start.deck.RemoveAt(0);

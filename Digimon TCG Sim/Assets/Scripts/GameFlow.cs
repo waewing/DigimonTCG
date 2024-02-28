@@ -38,6 +38,7 @@ public class GameFlow : MonoBehaviour
                 else
                 {
                     buttonText = "P1 Draw";
+                    // GameSetup.Draw(GameSetup.p1_hand, GameSetup.p1_deck);
                 }
                 break;
             case GamePhase.P2DrawPhase:
@@ -49,6 +50,7 @@ public class GameFlow : MonoBehaviour
                 else
                 {
                     buttonText = "P2 Draw";
+                    // GameSetup.Draw(GameSetup.p2_hand, GameSetup.p2_deck);
                 }
                 break;
 
@@ -60,6 +62,16 @@ public class GameFlow : MonoBehaviour
             case GamePhase.P2BreedingPhase:
                 endTurn.interactable = false;
                 buttonText = "P2 Breed";
+                break;
+
+            //Main Phases
+            case GamePhase.P1MainPhase:
+                endTurn.interactable = true;
+                buttonText = "";
+                break;
+            case GamePhase.P2MainPhase:
+                endTurn.interactable = true;
+                buttonText = "";
                 break;
         }
     }
@@ -102,20 +114,27 @@ public class GameFlow : MonoBehaviour
 
             //Main
             // Do main phase stuff (attacking, digivolving, ending turn etc.)
+            // case GamePhase.P1MainPhase:
+            //     GameSetup.curPhase = GamePhase.P1EndPhase;
+            //     break;
+            // case GamePhase.P2MainPhase:
+            //     GameSetup.curPhase = GamePhase.P2EndPhase;
+            //     break;
+            
+        }
+    }
+
+    public void EndTurn()
+    {
+        switch(GameSetup.curPhase)
+        {
             case GamePhase.P1MainPhase:
-                GameSetup.curPhase = GamePhase.P1EndPhase;
+                GameSetup.curPhase = GamePhase.P2UnsuspendPhase;
+                GameSetup.turnNumber += 1;
                 break;
             case GamePhase.P2MainPhase:
-                GameSetup.curPhase = GamePhase.P2EndPhase;
-                break;
-            
-            
-            //P1 End goes to P2 Unsuspend and vice versa
-            case GamePhase.P1EndPhase:
-                GameSetup.curPhase = GamePhase.P2UnsuspendPhase;
-                break;
-            case GamePhase.P2EndPhase:
                 GameSetup.curPhase = GamePhase.P1UnsuspendPhase;
+                GameSetup.turnNumber += 1;
                 break;
         }
     }
