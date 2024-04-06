@@ -12,6 +12,18 @@ public class GameFlow : MonoBehaviour
     public Button updatingButton;
     public Button endTurn;
 
+    public Deck p1_deck;
+
+    public Deck p1_hand;
+
+    public Deck p2_deck;
+
+    public Deck p2_hand;     
+
+    public GameObject card;
+    
+    public AudioSource drawSound;
+
     void Update()
     {
         switch(GameSetup.curPhase)
@@ -38,7 +50,6 @@ public class GameFlow : MonoBehaviour
                 else
                 {
                     buttonText = "P1 Draw";
-                    // GameSetup.Draw(GameSetup.p1_hand, GameSetup.p1_deck);
                 }
                 break;
             case GamePhase.P2DrawPhase:
@@ -50,16 +61,17 @@ public class GameFlow : MonoBehaviour
                 else
                 {
                     buttonText = "P2 Draw";
-                    // GameSetup.Draw(GameSetup.p2_hand, GameSetup.p2_deck);
                 }
                 break;
 
             //Breeding Phase
             case GamePhase.P1BreedingPhase:
+                updatingButton.onClick.RemoveListener(P1Draw);
                 endTurn.interactable = false;
                 buttonText = "P1 Breed";
                 break;
             case GamePhase.P2BreedingPhase:
+                updatingButton.onClick.RemoveListener(P2Draw);
                 endTurn.interactable = false;
                 buttonText = "P2 Breed";
                 break;
@@ -76,6 +88,22 @@ public class GameFlow : MonoBehaviour
         }
     }
 
+    void P1Draw()
+    {
+        GameSetup.Draw(p1_hand, p1_deck);
+        GameObject dupe = Instantiate(card,p1_hand.transform); 
+        drawSound.Play();
+        dupe.SetActive(true);
+        dupe.GetComponent<CardDisplay>().card = p1_hand.deck[^1];
+    }
+    void P2Draw()
+    {
+        GameSetup.Draw(p2_hand, p2_deck);
+        GameObject dupe = Instantiate(card,p2_hand.transform); 
+        drawSound.Play();
+        dupe.SetActive(true);
+        dupe.GetComponent<CardDisplay>().card = p2_hand.deck[^1];
+    }
 
     public void PhaseHandler()
     {
@@ -85,12 +113,20 @@ public class GameFlow : MonoBehaviour
             //Unsuspend all cards in battle area then got to next phase
             case GamePhase.P1UnsuspendPhase:
                 GameSetup.curPhase = GamePhase.P1DrawPhase;
+                if (GameSetup.turnNumber >= 2)
+                {
+                    updatingButton.onClick.AddListener(P1Draw);
+                }
                 break;
             case GamePhase.P2UnsuspendPhase:
                 GameSetup.curPhase = GamePhase.P2DrawPhase;
+                if (GameSetup.turnNumber >= 2)
+                {
+                    updatingButton.onClick.AddListener(P2Draw);
+                }
                 break;
 
-
+            
             //Draw
             //If turn 1 go to next phase
             //Otherwise draw 1 card from top of deck

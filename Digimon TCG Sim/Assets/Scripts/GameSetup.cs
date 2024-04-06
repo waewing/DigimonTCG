@@ -25,6 +25,7 @@ public class GameSetup : MonoBehaviour
     public Button goSecond;
 
     int decider = 0;
+    
 
     public static GamePhase curPhase;
 
@@ -38,8 +39,9 @@ public class GameSetup : MonoBehaviour
         goFirst.onClick.AddListener(P1First);
         goSecond.onClick.AddListener(P2First);
         turnNumber += 1;
-        
     }
+
+    
 
     //Draws 5 to players hand
     void StartingDraw(Deck destination, Deck start)
@@ -57,6 +59,7 @@ public class GameSetup : MonoBehaviour
         destination.deck.Add(start.deck[0]);
         start.deck.RemoveAt(0);
     }
+    
     
     void FisherYatesShuffle(Deck d)
     {
