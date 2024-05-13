@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Pop-Up Options
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Everything Else For Now
+    uniqueID: 1462594441
+    locked: 0
+  - name: Pop-Up Options
+    uniqueID: 2401873225
     locked: 0

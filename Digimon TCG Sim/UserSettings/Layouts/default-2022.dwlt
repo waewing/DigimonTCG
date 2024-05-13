@@ -646,9 +646,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.68469894, y: 0.52045864, z: 1123.2377}
+    m_Target: {x: -3.561977, y: -2.392889, z: 90.04944}
     speed: 2
-    m_Value: {x: 0.5644511, y: 0.47028628, z: 1071.0183}
+    m_Value: {x: -3.561977, y: -2.392889, z: 90.04944}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -681,7 +681,7 @@ MonoBehaviour:
         m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0, y: 0}
+      m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
         m_Target: 1
@@ -698,9 +698,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.536699
+    m_Target: 2.2259846
     speed: 2
-    m_Value: 5.2982764
+    m_Value: 2.2259846
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -718,7 +718,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: -0.009292494, y: -0.06086272, z: 0.0005666457, w: -0.9981032}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -762,9 +762,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 8e300100
       m_LastClickedID: 0
-      m_ExpandedIDs: fcf0feffc809ffffde1affff742cffff702dffffb83dffff7a42ffffe24affffcc5bffff5e5fffffe261ffffc26affff6e6effff4e7cffff3088ffffce8fffff2097ffff969dffff12a5ffff5eadffffaab3ffffaeb5ffff88b9ffffa0d6ffffc8daffff4addffffd2ddffff1ee9ffff64e9ffff30ebffff4eebffff80f2ffff9ef2ffff40f7ffffeafaffff026300000e63000006640000e4650000f0650000e8660000b6680000c2680000ba6900007c6b0000886b0000806c0000926c000006730000627300000874000010750000b67500008e8d0000da8e00002e9600008a96000030970000409a00009c9a0000429b0000349d000044a10000a0a1000046a20000dcb0000038b10000deb1000088b20000e4b200008ab3000046b8000054b80000a2b8000048b90000ecb90000f8b90000faba000076cb0000d2cb0000ded90000ead9000046da0000ecda00009ee20000a0e300006ce800006ee90000
+      m_ExpandedIDs: 0e46feff6670feff1674feffda74feffd67afeff4a82feff2a86feff488afefffc8ffeffa490feff5e92feffa092feff9aaafeffb4aafeffe6abfefff0acfeff04aefeff8ebffeff3cc0feffc4c1feff04c5feff0cc6feff7e3effff824affff424bffff744cfffff25efffff65fffff1064ffff3866ffff4067ffffc89effffce9effffe0b8ffffe6b8ffffc8daffffd4e6ffffd8e6ffff74eeffff80f9ffff14fbffff3c6b0000486b00004a6c00005a9e0000669e00006c9f000076b2000082b2000090b20000deb2000088b3000098b50000ecbe0000d6bf0000e2bf0000f2bf00008cf8000098f80000a0f900004afa000056fa00005efb0000f6ff0000d6050100d4070100e207010030080100a0130100801701003c1b0100fc240100d82d0100e42e0100a02f0100ac300100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -967,7 +967,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Cards/ST1
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -975,7 +975,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Cards/ST1
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Wayne Ewing\Documents\GitHub\DigimonTCG\Digimon TCG
     Sim
@@ -983,9 +983,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 06ea0000
-    m_LastClickedID: 59910
-    m_ExpandedIDs: 00000000c8620000ca620000cc620000ce62000000ca9a3b
+    m_SelectedIDs: 68660000
+    m_LastClickedID: 26216
+    m_ExpandedIDs: 00000000626300006463000066630000686300006866000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1013,7 +1013,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c8620000ca620000cc620000ce620000
+    m_ExpandedIDs: 0000000062630000646300006663000068630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
