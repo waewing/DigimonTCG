@@ -63,8 +63,9 @@ public class CardOptions : MonoBehaviour
 
         if(active == false)
         {
-            GameObject dupe = Instantiate(options,btn.transform);
+            GameObject dupe = Instantiate(options, btn.transform);
             dupe.name = "PopUp Options";
+            dupe.transform.position = card.transform.position;
             dupe.SetActive(true);
             if(dupe.transform.position.y >= 3f)
             {
@@ -75,7 +76,6 @@ public class CardOptions : MonoBehaviour
                 dupe.transform.Translate(0,1.22f,0);
             }
             active = true;
-
         }
         else
         {
